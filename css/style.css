@@ -1,0 +1,243 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+#map{
+    height: 380px;
+    border-radius: 15px;
+}
+
+#map2{
+    height: 380px;
+    border-radius: 15px;
+}
+
+.lorem {
+    font-style: italic;
+    color: #AAA;
+}
+
+body > #sidebar {
+    display: none;
+    color: #404040;
+}
+ /*
+ 
+.leaflet-marker-icon {
+    width: 56px !important;
+    background: rgba(255, 255, 255, 0.445);
+    padding: 3px !important;
+    border-radius: 7px !important;
+    font-weight: bold !important;
+    border: 2px solid #787c82 !important;
+    text-align: center !important;
+    color: #404040 !important;
+    box-sizing: content-box !important;
+}
+
+.leaflet-marker-icon:hover {
+    background: white !important;
+    color: #006064  !important;
+    padding: 5px !important;
+    z-index: 1000 !important;
+}
+
+*/
+
+.justificar_texto {
+    text-align: justify !important;
+}
+
+
+
+/******     AGUA ANIMACION    ******/
+
+.box {
+    height: 280px;
+    width: 280px;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    transform: translate(-0%, -0%);
+    border-radius: 10%;
+    overflow: hidden;
+    border: 2px solid rgb(199, 199, 199);
+}
+.box .percent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 9px #292929;
+    font-size: 30px;
+}
+.box .water {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100%);
+    background: #4d6de3;
+    background-image: linear-gradient(to bottom, #4d6de3, #3853b5, #243a88, #0f235f, #011353);    transition: all 0.3s;
+}
+.box .water_wave {
+    width: 200%;
+    position: absolute;
+    bottom: 100%;
+}
+.box .water_wave_back {
+    right: 0;
+    fill: #c7eeff;
+    animation: wave-back 1.4s infinite linear;
+}
+.box .water_wave_front {
+    left: 0;
+    fill: #4d6de3;
+    margin-bottom: -1px;
+    animation: wave-front 0.7s infinite linear;
+}
+@keyframes wave-front {
+    100% {
+        transform: translate(-50%, 0);
+   }
+}
+@keyframes wave-back {
+    100% {
+        transform: translate(50%, 0);
+   }
+}
+
+
+
+/*    ANIMACIONES    */
+.cargar_agua30{
+    animation: carga-30 3s ;
+    animation-fill-mode: forwards;
+}
+.cargar_agua50{
+    animation: carga-50 3s ;
+    animation-fill-mode: forwards;
+}
+.cargar_agua70{
+    animation: carga-70 3s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes carga-30 {
+    from {
+        transform: translate(0%, 100%);
+    }
+    to {
+        transform: translate(0%, 70%);
+    }
+}
+@keyframes carga-50 {
+    from {
+        transform: translate(0%, 100%);
+    }
+    to {
+        transform: translate(0%, 40%);
+    }
+}
+
+@keyframes carga-70 {
+    from {
+        transform: translate(0%, 100%);
+    }
+    to {
+        transform: translate(0%, 12%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-azul {
+    background-color: #1565c0 !important;
+    border-color: #1c79e4 !important;
+    color: white !important;
+}
+
+.txt-naranja {
+    color: #ef6c00 !important;
+}
+
+.txt-medio {
+    font-size: initial !important;
+}
+
+
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6) !important;
+  outline: 0 none !important;
+}
+
+
+
+
+/*
+
+<button onclick="animalopa()"> Animame pa </button>
+
+
+
+
+.animacioncita{
+    animation: suebelo-pa 1.4s infinite;
+  }
+  @keyframes suebelo-pa {
+    from {
+      transform: translate(0%, 5%);
+    }
+    to {
+      transform: translate(0%, 50%);
+    }
+  }
+
+
+  function animalopa(){
+    document.getElementById("water").classList.add("animacioncita");
+  
+  }
+
+  */

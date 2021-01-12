@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS 
+    <link rel="stylesheet" href="./css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css" >
+        <link rel="stylesheet" media="all" href="./css/animate.min.css">
+
+
+    <link rel="stylesheet" href="./css/leaflet.min.css" />
+    <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" /> -->
+    <link rel="stylesheet" href="./css/L.Control.Sidebar.css" />
+    <link rel="stylesheet" href="./label/leaflet.label.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Cuencas de Jalisco</title>
+</head>
+
+<body>
+
+
+    <div class="container p-4">
+        <div class="row d-flex justify-content-end">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+
+                <a class="navbar-brand" href="#">
+                    <img src="./media/iieg.png" alt="" width="300" height="auto">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent d-flex justify-content-end">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    
+    <div class="container" >
+        <div class="col-12">
+
+            <div class="row ">
+
+                <p class="text-secondary text-center p-5 justificar_texto">
+                    El anuncio de la cotización del agua en el mercado de futuros de Wall Street, a principios del mes de diciembre de 2020, 
+                    generó una serie de comentarios y debates respecto al uso, manejo, posesión, y en general, de la gobernanza del vital líquido. 
+                    En la Dirección de Información de Gobierno, Seguridad y Justicia del IIEG, creemos en la importancia de aportar insumos informativos 
+                    y de análisis a las discusiones socialmente relevantes en las  materias de nuestra competencia. 
+                    De lo anterior es que se ha desarrollado un visualizador de los 40 títulos de derechos de agua, que tienen un mayor volumen de extracción de las cuencas 
+                    a las que pertenece el estado de Jalisco. 
+                    Esta lista ha sido recuperada del trabajo desarrollado por el <a href="http://www.imdec.net/docs/2019/territorio/50mayorescaparadoresAguaJaliscoPresentacion.pdf">Instituto Mexicano para el Desarrollo Comunitario, A.C. (IMDEC)</a>  y corroborada y complementada 
+                    con información adicional obtenida por el <a href="https://app.conagua.gob.mx/Repda.aspx"> Registro Público de Derechos de Agua. </a>  
+                    De la lista del IMDEC se han incluído únicamente aquellos títulos cuyo posesionario es un actor privado.
+                    Actualmente existen alrededor de 25,000 títulos de derechos de agua en el estado, información con la que actualmente estamos trabajando para 
+                    complementar el presente visualizador.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container p-0 pt-3">
+
+        <div class="row m-0">
+            <div class="col-12">
+                <h5 class="text-secondary text-center">Acuiferos de Jalisco</h5>
+                <div id="sidebar">
+                    <div id="content_sidebar"></div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="container-fluid" id="info_concs">
+            <div class="col-12">
+
+                <div class="row m-0 p-5">
+
+                    
+                    <!--  DIV AGUA  -->
+                    <div class=" row col-12 col-md-5 align-middle pt-5" id="contenedor_agua" data-wow-duration="2s"
+                        data-wow-delay="0.2s">
+                        <div class="animacion align-middle pt-5" id="animacion">
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-12 col-md-7" id="div_info">
+                        
+                        <!-- SELECT DE CONCESIONARIOS -->
+                        <div class="row m-0 p-5 justify-content-center" id="select_concesionario">
+                        </div>
+
+                        <!--  DIV INFO  -->
+                        <div class="col-12" id="info_concesionario">
+                        </div>
+
+                        <div class="row m-0">
+                            <div class="col-12" id="cont_map2">
+                                <div id="map2" class="bg-white " style="height: 400px; width: 100%;" ></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+
+
+
+
+
+
+                </div>
+
+                
+
+            </div>
+
+
+            
+        </div>
+
+
+    </div>
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./js/wow.min.js"></script>
+
+    
+    <script src="./js/leaflet.min.js"></script>
+    <script src="./label/leaflet.label.js"></script>
+    <script src="./js/L.Control.Sidebar.js"></script>
+
+    <script src="./js/catiline.js"></script>
+    <script src="./js/leaflet.shpfile.js"></script>
+
+    <script src="./js/javascript.js"></script>
+
+</body>
+
+</html>
